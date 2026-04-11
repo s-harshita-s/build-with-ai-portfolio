@@ -1,78 +1,353 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio — Build with AI</title>
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0a0f1c">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #0a0f1c;
-      color: #e2e8f0;
-      font-family: system-ui, sans-serif;
-      padding: 24px;
-      text-align: center;
-    }
-    .setup {
-      max-width: 520px;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 16px;
-    }
-    p {
-      color: #7b8ba8;
-      line-height: 1.7;
-      margin-bottom: 12px;
-      font-size: 15px;
-    }
-    code {
-      background: rgba(255,255,255,0.08);
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 13px;
-      color: #4f8fff;
-    }
-    .steps {
-      text-align: left;
-      margin-top: 24px;
-      padding: 20px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 12px;
-    }
-    .steps li {
-      color: #7b8ba8;
-      margin-bottom: 10px;
-      font-size: 14px;
-      line-height: 1.6;
-    }
-  </style>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>HARSHITA SINGH | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#290067",
+                        "on-primary-container": "#005359",
+                        "primary-dim": "#00deec",
+                        "secondary-dim": "#b90afc",
+                        "tertiary-fixed": "#bda1ff",
+                        "on-tertiary-container": "#f8f1ff",
+                        "on-tertiary-fixed-variant": "#4700a7",
+                        "secondary-container": "#9800d0",
+                        "surface-container-lowest": "#000000",
+                        "on-error": "#490013",
+                        "on-surface-variant": "#acaab3",
+                        "primary-container": "#00eefc",
+                        "on-secondary-container": "#fff5fc",
+                        "secondary-fixed-dim": "#eaaeff",
+                        "surface-dim": "#0e0e14",
+                        "surface-tint": "#8ff5ff",
+                        "secondary": "#d575ff",
+                        "on-secondary-fixed": "#58007a",
+                        "on-primary": "#005d63",
+                        "outline": "#76747d",
+                        "inverse-primary": "#006a71",
+                        "error-container": "#a70138",
+                        "surface-container-highest": "#25252e",
+                        "surface-container-high": "#1f1f27",
+                        "tertiary-dim": "#874cff",
+                        "on-background": "#f6f2fc",
+                        "inverse-on-surface": "#55545c",
+                        "primary": "#8ff5ff",
+                        "surface-container": "#191921",
+                        "on-primary-fixed-variant": "#005e64",
+                        "outline-variant": "#48474f",
+                        "on-surface": "#f6f2fc",
+                        "background": "#0e0e14",
+                        "inverse-surface": "#fcf8ff",
+                        "on-tertiary-fixed": "#1f0052",
+                        "on-secondary": "#390050",
+                        "primary-fixed-dim": "#00deec",
+                        "surface-variant": "#25252e",
+                        "on-primary-fixed": "#003f43",
+                        "tertiary-fixed-dim": "#b190ff",
+                        "primary-fixed": "#00eefc",
+                        "error-dim": "#d73357",
+                        "tertiary": "#ac89ff",
+                        "surface-container-low": "#13131a",
+                        "error": "#ff6e84",
+                        "secondary-fixed": "#f0c1ff",
+                        "surface": "#0e0e14",
+                        "on-error-container": "#ffb2b9",
+                        "tertiary-container": "#7000ff",
+                        "surface-bright": "#2b2b35",
+                        "on-secondary-fixed-variant": "#8300b4"
+                    },
+                    "borderRadius": {
+                        "md": "0.75rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0e0e14;
+            color: #f6f2fc;
+            overflow-x: hidden;
+        }
+        .bg-nebula {
+            background: radial-gradient(circle at 20% 30%, rgba(143, 245, 255, 0.05) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(213, 117, 255, 0.05) 0%, transparent 40%);
+        }
+        .glass-card {
+            background: rgba(19, 19, 26, 0.5);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border-top: 1px solid rgba(143, 245, 255, 0.2);
+            box-shadow: 0 0 60px rgba(143, 245, 255, 0.05); /* Ambient shadow */
+        }
+        /* Custom scrollbar to match theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0e0e14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(72, 71, 79, 0.5); /* outline-variant */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(143, 245, 255, 0.4);
+        }
+    </style>
 </head>
-<body>
-  <div class="setup">
-    <h1>🚀 You're all set!</h1>
-    <p>This is your starter repo for the <strong>Build with AI</strong> workshop.</p>
-    <p>Replace this file with the portfolio you build using <strong>Google Stitch</strong> &amp; <strong>Antigravity IDE</strong>.</p>
-    <ol class="steps">
-      <li>Generate your portfolio using <strong>Stitch</strong></li>
-      <li>Customize it in <strong>Antigravity IDE</strong></li>
-      <li>Replace this <code>index.html</code> with your generated code</li>
-      <li>Add your assets (photo, screenshots) to <code>/assets</code></li>
-      <li>Push to GitHub and enable <strong>GitHub Pages</strong></li>
-    </ol>
-  </div>
+<body class="font-body selection:bg-primary selection:text-on-primary">
+<!-- Cosmic Background Layer -->
+<div class="fixed inset-0 -z-10 bg-nebula pointer-events-none"></div>
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js').catch(() => {});
-    }
-  </script>
+<main class="relative pb-24"> 
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center items-start px-6 md:px-12 relative overflow-hidden" id="hero">
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-[100px]"></div>
+        <div class="absolute -bottom-24 top-1/2 right-12 w-96 h-96 bg-secondary/10 rounded-full blur-[100px]"></div>
+        
+        <!-- Intentional Asymmetry: hero elements float off-axis -->
+        <div class="relative z-10 space-y-4 md:ml-[10vw]">
+            <h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tight text-on-surface">
+                HARSHITA <br/><span class="text-primary drop-shadow-[0_0_20px_rgba(143,245,255,0.4)]">SINGH</span>
+            </h1>
+            <p class="font-label text-sm md:text-lg tracking-[0.3em] uppercase text-on-surface-variant max-w-2xl leading-relaxed">
+                EXPLORING IDEAS BEYOND GRAVITY
+            </p>
+            <div class="pt-12">
+                <!-- Hover Glow and Scale up for CTA -->
+                <button class="bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed font-bold px-10 py-4 rounded-full hover:scale-105 transition-all shadow-[0_0_30px_rgba(143,245,255,0.2)] hover:shadow-[0_0_50px_rgba(143,245,255,0.6)]">
+                    INITIATE JOURNEY
+                </button>
+            </div>
+        </div>
+
+        <!-- Floating Indicator -->
+        <div class="absolute bottom-32 left-[15vw] md:left-[12vw] flex flex-col items-center gap-2 opacity-40">
+            <span class="text-[10px] font-label uppercase tracking-[0.2em]" style="writing-mode: vertical-rl">Descent</span>
+            <span class="material-symbols-outlined mt-2 text-primary animate-bounce">expand_more</span>
+        </div>
+    </section>
+
+    <!-- About Section (Essence) -->
+    <section class="py-24 px-6 max-w-7xl mx-auto" id="essence">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative group">
+                <div class="absolute inset-0 bg-primary/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+                <div class="glass-card rounded-xl overflow-hidden aspect-[4/5] relative z-10">
+                    <img alt="Harshita Singh" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Cinematic portrait of a young woman with a thoughtful expression, lit by cool blue and violet ambient light, futuristic aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZhR2kF1kaUVVBEhvOErfyS9xgiDAJabuy6ypH90hgjZ1_fF3_-BSf5wuoS-iUvq_v18nvAyjcGsfN_JbMPsy0FyQXPQZmgKFhlIAo2h6nbdHdtvH6t4JPAFRnj9f05iYlCVH8T7kqjKaCQaxH1z8xEnooozsQdgd1tg65nPxma7ZCJl8LJTFYGU7W-mYtzQxFfjKxf477d1cFGqZyPziShQnskPyZjRx-7Gd9Sm2KrFu0DU5HzyF2tczgvGekHatxO4oj1rka_wY3"/>
+                </div>
+            </div>
+            <div class="space-y-8">
+                <!-- Ghost border instance -->
+                <div class="inline-block px-4 py-1 rounded-full border border-outline-variant/15 text-primary text-xs font-label tracking-[0.1em] uppercase">
+                    The Architect
+                </div>
+                <h2 class="font-headline text-4xl md:text-5xl font-bold leading-tight">Crafting Digital <span class="italic text-secondary">Ecosystems</span> in Zero-G.</h2>
+                <p class="text-on-surface-variant text-lg leading-relaxed font-body">
+                    I am a full-stack architect specializing in creating interfaces that feel as light as air. By blending technical precision with ethereal aesthetics, I build digital experiences that defy the conventional boundaries of interaction.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4">
+                    <div class="space-y-1">
+                        <span class="text-primary font-headline text-3xl font-bold">5+</span>
+                        <p class="font-label text-[10px] uppercase tracking-[0.1em] opacity-60 text-on-surface-variant">Years in Orbit</p>
+                    </div>
+                    <div class="space-y-1">
+                        <span class="text-primary font-headline text-3xl font-bold">42</span>
+                        <p class="font-label text-[10px] uppercase tracking-[0.1em] opacity-60 text-on-surface-variant">Missions Completed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (Works) -->
+    <section class="py-32 px-6 max-w-7xl mx-auto" id="works">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+            <div class="space-y-4">
+                <h2 class="font-headline text-4xl md:text-6xl font-bold">LATEST <span class="text-secondary drop-shadow-[0_0_15px_rgba(213,117,255,0.4)]">WORKS</span></h2>
+                <p class="text-on-surface-variant max-w-md font-body">Selected prototypes and systems deployed across the digital stratosphere.</p>
+            </div>
+            <button class="text-primary font-label text-sm uppercase tracking-[0.1em] flex items-center gap-2 group hover:text-primary-container transition-colors">
+                View All Archives <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+            </button>
+        </div>
+        <div class="grid md:grid-cols-12 gap-8">
+            <!-- Bento Project 1 -->
+            <div class="md:col-span-8 group relative">
+                <div class="glass-card rounded-xl overflow-hidden h-[400px] relative">
+                    <img alt="Nebula OS" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQgaKyL0A6Fi67ExQN07p0rqz88NxdJsN3E2Qd6px24OS-AjpX40snSzbGOsmHvqzABp_4mtwPuxTJ7extg_UeVDjVks1pAVStWLrONYACi2Q-GaLtWcFs7mPbiKkRsxsIox5Sw0uzc8BKTogI5MIq_1g--iXEV8AB-zj71PJl8N3ptAYZB4I22fYb3StHGLCGSRW8zFR-E7_ny9M5YCfL52cCRYZW_pwC2eehstzkpV0_ox1yBYzIS5HPmr1L3z1hoaSuVw3ihH1Q"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-8 space-y-3">
+                        <span class="text-[10px] font-label uppercase tracking-[0.1em] text-primary">System Design</span>
+                        <h3 class="font-headline text-3xl font-bold">Nebula OS Dashboard</h3>
+                        <p class="text-on-surface-variant max-w-sm line-clamp-2 font-body">A comprehensive HUD for interplanetary logistics and fleet management.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Bento Project 2 -->
+            <div class="md:col-span-4 group relative">
+                <div class="glass-card rounded-xl overflow-hidden h-[400px] relative">
+                    <img alt="Lunar Landing" class="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKwDu4j2y4zqf1Us81obS33kluzs_VnEvqmdRJfw27tPAW5rCNDWQAefy0m2hmp2rdQMXpUy2V8YjjSRBOJY6kO5YXTlD-9doxw6-02rIl2FwnNrmfEn-mFKkvF8IXmgmVRIAeQPFp1lKG-GE7SUNrQzvPnBhVYjvokHCzS2sZeuqU5vzJAWHWP266eqIec3uywpFI6MIbpIaWxYOrJM4wpUPAqNk33qLHxb105h1Rga397aa_lJOauXEWxZQDe7GhP2XNJFDSUHHt"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-8 space-y-3">
+                        <span class="text-[10px] font-label uppercase tracking-[0.1em] text-secondary">Creative Tech</span>
+                        <h3 class="font-headline text-2xl font-bold">Lunar Pulse</h3>
+                        <p class="text-on-surface-variant line-clamp-2 font-body">Real-time biometric feedback visualized through celestial waves.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Bento Project 3 -->
+            <div class="md:col-span-12 group relative">
+                <div class="glass-card rounded-xl overflow-hidden h-[300px] relative flex items-center justify-center p-8 text-center">
+                    <div class="absolute inset-0 opacity-10">
+                        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvXfYT36DPzVK97mSLdD_sFG4eI0LVMiDO4bjDOlbpcLYP_DvdICb_itD7zTC_-W2l6grND3awRAOTIgt25CP5M8jX_PV453gWg-cH1KHVfXdX6QwckPymuxaBQ_wvWZ3_fPf8uL2mIrEMPFQNlQzM-6C5e0e1kTzy2BjYBfVz-girMZ7yzdziMvX7I379IH0qlIJ73fIkFVJHeJS0vF-qDqOBvFgni_Jp-M89JhH_t95rOIf0LBU_eUUc3Yobcn6bE7UhPpGCUgIc"/>
+                    </div>
+                    <div class="relative z-10 max-w-2xl">
+                        <span class="text-[10px] font-label uppercase tracking-[0.1em] text-tertiary mb-4 block">Experimental</span>
+                        <h3 class="font-headline text-4xl font-bold mb-4">Zero-G Engine</h3>
+                        <p class="text-on-surface-variant font-body">A physics engine designed specifically for floating UI elements and non-linear user flows.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section (Matrix) -->
+    <!-- Tonal layer transition (surface to surface-container-low) without hard borders -->
+    <section class="py-32 px-6 relative overflow-hidden bg-surface-container-low" id="matrix">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-24">
+                <h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">TECHNICAL <span class="text-primary drop-shadow-[0_0_15px_rgba(143,245,255,0.4)]">ORBIT</span></h2>
+                <p class="text-on-surface-variant font-label tracking-[0.1em] text-sm uppercase">Synchronized Proficiencies</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-12 max-w-4xl mx-auto">
+                <!-- Kinetic Chips: pulse tertiary on hover -->
+                <div class="flex flex-col items-center gap-5 group cursor-pointer">
+                    <div class="w-24 h-24 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant/15 group-hover:bg-tertiary group-hover:scale-110 transition-all duration-300 shadow-[0_0_20px_rgba(143,245,255,0.02)] group-hover:shadow-[0_0_30px_rgba(172,137,255,0.4)] group-hover:border-tertiary">
+                        <span class="material-symbols-outlined text-3xl text-primary group-hover:text-surface-lowest transition-colors" data-weight="fill">code</span>
+                    </div>
+                    <span class="font-label text-[10px] uppercase tracking-[0.1em] text-on-surface-variant group-hover:text-tertiary transition-colors">Architect</span>
+                </div>
+                <div class="flex flex-col items-center gap-5 group cursor-pointer">
+                    <div class="w-24 h-24 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant/15 group-hover:bg-tertiary group-hover:scale-110 transition-all duration-300 shadow-[0_0_20px_rgba(213,117,255,0.02)] group-hover:shadow-[0_0_30px_rgba(172,137,255,0.4)] group-hover:border-tertiary">
+                        <span class="material-symbols-outlined text-3xl text-secondary group-hover:text-surface-lowest transition-colors" data-weight="fill">token</span>
+                    </div>
+                    <span class="font-label text-[10px] uppercase tracking-[0.1em] text-on-surface-variant group-hover:text-tertiary transition-colors">Interface</span>
+                </div>
+                <div class="flex flex-col items-center gap-5 group cursor-pointer">
+                    <div class="w-24 h-24 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant/15 group-hover:bg-tertiary group-hover:scale-110 transition-all duration-300 shadow-[0_0_20px_rgba(172,137,255,0.02)] group-hover:shadow-[0_0_30px_rgba(172,137,255,0.4)] group-hover:border-tertiary">
+                        <span class="material-symbols-outlined text-3xl text-tertiary group-hover:text-surface-lowest transition-colors" data-weight="fill">database</span>
+                    </div>
+                    <span class="font-label text-[10px] uppercase tracking-[0.1em] text-on-surface-variant group-hover:text-tertiary transition-colors">Ecosystem</span>
+                </div>
+                <div class="flex flex-col items-center gap-5 group cursor-pointer">
+                    <div class="w-24 h-24 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant/15 group-hover:bg-tertiary group-hover:scale-110 transition-all duration-300 shadow-[0_0_20px_rgba(143,245,255,0.02)] group-hover:shadow-[0_0_30px_rgba(172,137,255,0.4)] group-hover:border-tertiary">
+                        <span class="material-symbols-outlined text-3xl text-primary group-hover:text-surface-lowest transition-colors" data-weight="fill">animation</span>
+                    </div>
+                    <span class="font-label text-[10px] uppercase tracking-[0.1em] text-on-surface-variant group-hover:text-tertiary transition-colors">Kinetic</span>
+                </div>
+                <div class="flex flex-col items-center gap-5 group cursor-pointer">
+                    <div class="w-24 h-24 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant/15 group-hover:bg-tertiary group-hover:scale-110 transition-all duration-300 shadow-[0_0_20px_rgba(213,117,255,0.02)] group-hover:shadow-[0_0_30px_rgba(172,137,255,0.4)] group-hover:border-tertiary">
+                        <span class="material-symbols-outlined text-3xl text-secondary group-hover:text-surface-lowest transition-colors" data-weight="fill">terminal</span>
+                    </div>
+                    <span class="font-label text-[10px] uppercase tracking-[0.1em] text-on-surface-variant group-hover:text-tertiary transition-colors">Core</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (Reach) -->
+    <section class="py-32 px-6 max-w-2xl mx-auto" id="reach">
+        <div class="glass-card rounded-xl p-8 md:p-14 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-48 h-48 bg-primary/10 blur-[60px] -mr-16 -mt-16 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-48 h-48 bg-secondary/10 blur-[60px] -ml-16 -mb-16 pointer-events-none"></div>
+            
+            <div class="relative z-10">
+                <h2 class="font-headline text-3xl md:text-5xl font-bold mb-10 text-center">Establish <span class="text-primary drop-shadow-[0_0_15px_rgba(143,245,255,0.4)]">Link</span></h2>
+                <form class="space-y-10">
+                    <div class="space-y-2">
+                        <label class="block text-[10px] font-label uppercase tracking-[0.1em] text-on-surface-variant">Identity</label>
+                        <!-- Bottom ghost border only -->
+                        <input class="w-full bg-transparent border-0 border-b border-outline-variant/15 py-3 text-on-surface focus:ring-0 focus:border-b-2 focus:border-primary transition-colors placeholder:text-white/20 font-body placeholder:font-body" placeholder="Commander Name" type="text"/>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-[10px] font-label uppercase tracking-[0.1em] text-on-surface-variant">Coordinates</label>
+                        <input class="w-full bg-transparent border-0 border-b border-outline-variant/15 py-3 text-on-surface focus:ring-0 focus:border-b-2 focus:border-primary transition-colors placeholder:text-white/20 font-body placeholder:font-body" placeholder="Email@Space.Station" type="email"/>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-[10px] font-label uppercase tracking-[0.1em] text-on-surface-variant">Message Broadcast</label>
+                        <textarea class="w-full bg-transparent border-0 border-b border-outline-variant/15 py-3 text-on-surface focus:ring-0 focus:border-b-2 focus:border-primary transition-colors placeholder:text-white/20 font-body placeholder:font-body resize-none" placeholder="Briefing details..." rows="4"></textarea>
+                    </div>
+                    
+                    <!-- Secondary Button style with ghost border -->
+                    <button class="w-full py-5 rounded-full border border-outline-variant/15 text-on-surface font-label text-xs uppercase tracking-[0.1em] hover:bg-surface-container-highest hover:text-primary hover:border-primary/50 transition-all group flex justify-center items-center gap-3 hover:scale-105">
+                        <span class="relative z-10 mt-0.5">Transmit Data</span>
+                        <span class="material-symbols-outlined text-sm relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">send</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="flex flex-col items-center gap-6 w-full px-8 opacity-60 pb-32 font-label text-[10px] uppercase tracking-[0.2em] bg-transparent">
+    <div class="flex gap-10 mb-4">
+        <a class="text-on-surface-variant hover:text-primary hover:tracking-[0.3em] transition-all duration-700" href="#">LinkedIn</a>
+        <a class="text-on-surface-variant hover:text-primary hover:tracking-[0.3em] transition-all duration-700" href="#">GitHub</a>
+        <a class="text-on-surface-variant hover:text-primary hover:tracking-[0.3em] transition-all duration-700" href="#">Layers</a>
+    </div>
+    <div class="text-primary font-bold text-center">© 2024 HARSHITA SINGH. <br class="md:hidden"/>ENGINEERED FOR ZERO GRAVITY.</div>
+</footer>
+
+<!-- Navigation: The Horizon Line (Floating Dock) -->
+<div class="fixed bottom-0 left-0 w-full z-50 flex justify-center pb-6 md:pb-8 pointer-events-none">
+    <nav class="pointer-events-auto bg-surface-container-low/50 backdrop-blur-[40px] rounded-full mx-auto w-auto max-w-[90%] md:max-w-2xl flex items-center justify-between shadow-[0_0_50px_rgba(213,117,255,0.05)] border border-outline-variant/15 gap-2 md:gap-6 px-3 py-2">
+        <a class="flex flex-col items-center justify-center bg-primary/10 text-primary rounded-full px-5 py-3 shadow-[0_0_15px_rgba(143,245,255,0.2)] hover:bg-primary/20 transition-all duration-300 group hover:scale-105" href="#hero">
+            <span class="material-symbols-outlined text-[20px] md:text-xl group-hover:-translate-y-0.5 transition-transform">rocket_launch</span>
+            <span class="text-[8px] font-label tracking-[0.1em] mt-1.5 hidden md:block">ORBIT</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant/70 px-5 py-3 hover:text-on-surface cursor-pointer transition-all duration-300 group hover:scale-105" href="#essence">
+            <span class="material-symbols-outlined text-[20px] md:text-xl group-hover:-translate-y-0.5 transition-transform">account_circle</span>
+            <span class="text-[8px] font-label tracking-[0.1em] mt-1.5 hidden md:block">ESSENCE</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant/70 px-5 py-3 hover:text-on-surface cursor-pointer transition-all duration-300 group hover:scale-105" href="#works">
+            <span class="material-symbols-outlined text-[20px] md:text-xl group-hover:-translate-y-0.5 transition-transform">grid_view</span>
+            <span class="text-[8px] font-label tracking-[0.1em] mt-1.5 hidden md:block">WORKS</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant/70 px-5 py-3 hover:text-on-surface cursor-pointer transition-all duration-300 group hover:scale-105" href="#matrix">
+            <span class="material-symbols-outlined text-[20px] md:text-xl group-hover:-translate-y-0.5 transition-transform">psychology</span>
+            <span class="text-[8px] font-label tracking-[0.1em] mt-1.5 hidden md:block">MATRIX</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant/70 px-5 py-3 hover:text-on-surface cursor-pointer transition-all duration-300 group hover:scale-105" href="#reach">
+            <span class="material-symbols-outlined text-[20px] md:text-xl group-hover:-translate-y-0.5 transition-transform">alternate_email</span>
+            <span class="text-[8px] font-label tracking-[0.1em] mt-1.5 hidden md:block">REACH</span>
+        </a>
+    </nav>
+</div>
 </body>
 </html>
